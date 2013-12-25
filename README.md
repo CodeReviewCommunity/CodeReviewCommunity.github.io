@@ -1,2 +1,1 @@
-CodeReviewCommunity.github.io
-=============================
+The front page of the Code Review Community.
