@@ -2,7 +2,9 @@ The front page of the Code Review Community.  Come visit us at [CodeReviewCommun
 
 ## To do
 
-* Add Google Analytics ID
-* Add shortcut icon file (the same as CR?)
-* Rework 404 with the other pages
-* Maintain the `humans.txt`: Add TEAM + HELPERS; Update used technologies after reworking pages
+* HTML: Add shortcut icon file (the same as CR?)
+* HTML: Rework 404 with the other pages
+* CSS: Use minified `normalize.css`
+* CSS: Use minified stylesheets for production and extended stylesheets for developing
+* Misc: Add Google Analytics ID
+* Misc: Maintain the `humans.txt`: Add TEAM + HELPERS; Update used technologies after reworking pages
