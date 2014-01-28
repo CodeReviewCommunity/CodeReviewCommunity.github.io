@@ -1,0 +1,55 @@
+/*
+ * Applied dev-metal.com Google Chrome font rendering fix (Update, November 2013: Solution #1):
+ * http://www.dev-metal.com/fix-ugly-font-rendering-google-chrome/
+ */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular.eot');
+    src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular.woff') format('woff'),
+         url('../fonts/roboto-regular.ttf') format('truetype'),
+         url('../fonts/roboto-regular.svg#robotoregular') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Roboto';
+            src: url('../fonts/roboto-regular.svg#robotoregular') format('svg');
+    }
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-italic.eot');
+    src: url('../fonts/roboto-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-italic.woff') format('woff'),
+         url('../fonts/roboto-italic.ttf') format('truetype'),
+         url('../fonts/roboto-italic.svg#robotoitalic') format('svg');
+    font-style: italic;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Roboto';
+            src: url('../fonts/roboto-italic.svg#robotoitalic') format('svg');
+        font-style: italic;
+    }
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-bold.eot');
+    src: url('../fonts/roboto-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold.woff') format('woff'),
+         url('../fonts/roboto-bold.ttf') format('truetype'),
+         url('../fonts/roboto-bold.svg#robotobold') format('svg');
+    font-weight: 700;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Roboto';
+            src: url('../fonts/roboto-bold.svg#robotobold') format('svg');
+        font-weight: 700;
+    }
+}
