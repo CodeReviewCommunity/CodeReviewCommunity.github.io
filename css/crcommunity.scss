@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import
+        "vars",
+        "ui/normalize",
+        "ui/roboto",
+        "ui/misc",
+        "ui/typography",
+        "ui/site-logo"
+;
+
+body {
+    margin: $base-spacing-unit * 2 0;
+    margin: 3rem 0;
+}
+
+.page-lead {
+    @extend %vertical-gap-bottom;
+}

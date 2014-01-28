@@ -1,0 +1,35 @@
+.wrapper,
+%wrapper {
+    max-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $half-spacing-unit;
+    padding-left: $half-spacing-unit;
+
+    @media (min-width: 681px) {
+        padding-right: $base-spacing-unit;
+        padding-left: $base-spacing-unit;
+    }
+}
+
+.vertical-gap-top,
+%vertical-gap-top {
+    margin-top: $base-spacing-unit * 2;
+    margin-top: 3rem;
+
+    @media (min-width: 681px) {
+        margin-top: $base-spacing-unit * 4;
+        margin-top: 6rem;
+    }
+}
+
+.vertical-gap-bottom,
+%vertical-gap-bottom {
+    margin-bottom: $base-spacing-unit * 2;
+    margin-bottom: 3rem;
+
+    @media (min-width: 681px) {
+        margin-bottom: $base-spacing-unit * 4;
+        margin-bottom: 6rem;
+    }
+}

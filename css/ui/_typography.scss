@@ -1,0 +1,144 @@
+html {
+    font: 1.125em/1.5 Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    color: $foreground-color;
+    background-color: $background-color;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+dt {
+    font-weight: 700;
+}
+
+h1, .alpha {
+  font-size: 36px;
+  font-size: 1.8rem;
+  line-height: 1.66667;
+}
+
+h2, .beta {
+  font-size: 30px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h3, .gamma {
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+h4, .delta {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.875;
+}
+
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.7rem;
+  line-height: 2.14286;
+}
+
+
+
+/**
+ * Base styles
+ */
+img {
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+
+
+/**
+ * Rules
+ */
+ hr {
+    color: $light-ui-color;
+    border: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: $base-spacing-unit - 1px;
+    margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
+ }
+
+
+
+/**
+ * Inline elements
+ */
+strong, a {
+    font-weight: 700;
+}
+
+q {
+    font-style: italic;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $base-ui-color;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Code
+ */
+pre, code, kbd, samp {
+    font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
+}
+
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    color: $background-color;
+    background-color: $foreground-color;
+    padding: $base-spacing-unit / 4 $half-spacing-unit;
+    border-radius: 3px;
+}
+
+code, kbd, samp {
+    color: $base-ui-color;
+
+    pre & {
+        color: $background-color;
+    }
+}
