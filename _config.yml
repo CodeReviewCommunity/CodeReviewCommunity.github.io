@@ -1,0 +1,9 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:title
+paginate: 5
+relative_permalinks: false
+exclude: [prepros.json, config.rb]
+name: Code Review Community
+description: Weekend Challenges and projects by the Code Review Community.
+url: http://codereviewcommunity.github.io

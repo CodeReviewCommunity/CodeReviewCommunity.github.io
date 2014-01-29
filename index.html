@@ -1,53 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>Code Review Community</title>
-        
-        <link rel="stylesheet" href="css/crcommunity.min.css">
-        <link rel="shortcut icon" href="/icon.png">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700">
+---
+layout: default
+title: "Code Review Community"
+page-class: page--home
+---
+<div class="page-lead">
+    <p>This <a href="https://github.com/codereviewcommunity">community</a> is dedicated to the <a href="http://meta.codereview.stackexchange.com/questions/1201/cr-weekend-challenge">Weekend Challenges</a> and other projects going on on <a href="http://codereview.stackexchange.com/">Code Review</a>.</p>
+    <p><a href="https://github.com/codereviewcommunity/codereviewcommunity.github.io/issues/new">Open an issue</a> on this repo to get added to the organization. <strong>Please state what language/team(s) you would like to be added to.</strong> If your reputation on Code Review is <strong>2000 or greater</strong>, you will be added to the "Admin" team automatically.</p>
+</div>
 
-        <meta name="description" content="Weekend Challenges and projects by the Code Review Community.">
-        
-        <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 9]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your 
-browser</a> to improve your experience.</p>
-        <![endif]-->
+{% for post in paginator.posts %}
+<article class="post">
+    <a href="{{ post.url }}" class=post__link>
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class=post__time>{{ post.date | date: "%-d %B, %Y" }}</time>
+    </a>
+    <h2 class=post__title>{{ post.title }}</h2>
 
-        <div class="wrapper">
-            <a href="/" class="site-logo">
-                <img src="img/cr-logo.png" alt="Code Review logo">
-            </a>
+    {{ post.content }}
+</article>
+{% endfor %}
 
-            <div class="page-lead">
-                <p>This <a href="https://github.com/codereviewcommunity">community</a> is dedicated to the <a href="http://meta.codereview.stackexchange.com/questions/1201/cr-weekend-challenge">Weekend Challenges</a> and other projects going on on <a href="http://codereview.stackexchange.com/">Code Review</a>.</p>
-                <p><a href="https://github.com/codereviewcommunity/codereviewcommunity.github.io/issues/new">Open an issue</a> on this repo to get added to the organization. <strong>Please state what language/team(s) you would like to be added to.</strong> If your reputation on Code Review is <strong>2000 or greater</strong>, you will be added to the "Admin" team automatically.</p>
-            </div>
-
-            <!--
-            <main class="page-content" role="main">
-                <article class="post">
-                        <p>Add article.</p>
-                </article>
-            </main>
-            -->
-        </div>
-        
-        <!--<script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>-->
-    </body> 
-</html>
+{% if paginator.total_pages > 1 %}
+<ol class="pagination">
+    <li class=pagination__prev>
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a href="/" rel=prev>Newer</a>
+        {% else %}
+            <a href="/page{{paginator.previous_page}}" rel=prev>Newer</a>
+        {% endif %}
+        {% else %}
+            Newer
+        {% endif %}
+    </li><!--
+ --><li class=pagination__next>
+        {% if paginator.next_page %}
+            <a href="/page{{paginator.next_page}}" rel=next>Older</a>
+        {% else %}
+            Older
+        {% endif %}
+    </li>
+</ol>
+{% endif %}
